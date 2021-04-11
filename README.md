@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Traffic Light Simulator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Within this app, there is a simulation for how a traffic light works.
 
-## Available Scripts
+## Design Language
 
-In the project directory, you can run:
+Atomic design in the design language of choice and components are broken into the following categories:
+- atoms
+- molecules
+- ecosystems
+- etc.
 
-### `yarn start`
+Read more on Atomic Deisgn [HERE](https://bradfrost.com/blog/post/atomic-web-design/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instructions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+By running the app, you will be provided with instructions that inform an individual how to interact with the simulator
 
-### `yarn test`
+## Types of State Machines
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Non-Deterministic
 
-### `yarn build`
+Chooses next light at random without using the current or next state.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Deterministic
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Chooses next light based on the sequence `R -> G -> Y -> (repeat)`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Outstanding Feature Work
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `TODO` clean up - there are many TODOs that need addressing
+- Migrate `styles.scss` styles to relevant files when their respective components are created.
+- Unit tests - there was no testing package, so much error handling was created in order to handle error states and null data states. Unit tests will help address unknowns in the future
+- Traffic Sequence Flexibility - Make the traffic light more flexible for different sequencing and different colors schemes.
+- Debounce events - Creating a debounce event that prevents user from making too many requests. We could also disable the button state until data or the next state is retrieved.
